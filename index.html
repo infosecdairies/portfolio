@@ -3,49 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cybersecurity Portfolio</title>
+    <title>Kenne Babu Pothuraju - Cybersecurity Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #121212;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
             color: white;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
         }
-        h1 {
+        header {
+            background: linear-gradient(90deg, #00ff99, #00ccff);
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 15px rgba(0, 255, 153, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h2 {
             color: #00ff99;
+            border-bottom: 2px solid #00ccff;
+            display: inline-block;
+            padding-bottom: 5px;
+            text-shadow: 0 0 10px #00ff99;
+            transition: 0.3s;
+        }
+        h2:hover {
+            color: #00ccff;
+            text-shadow: 0 0 15px #00ccff;
         }
         a {
             color: #00ccff;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
+        }
+        a:hover {
+            color: #00ff99;
+            text-shadow: 0 0 10px #00ff99;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px rgba(0, 255, 153, 0.5);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <h1>🚀 Welcome to My Cybersecurity Portfolio</h1>
-    <p>Hi, I'm <strong>[kenne babu pothuraju]</strong>, an aspiring SOC Analyst.</p>
-
-    <h2>🔹 About Me</h2>
-    <p>I am passionate about cybersecurity, threat hunting, and digital forensics.</p>
-
-    <h2>🛡️ Skills</h2>
-    <ul>
-        <li>SIEM (Splunk, ELK)</li>
-        <li>Threat Intelligence</li>
-        <li>Log Analysis</li>
-        <li>Incident Response</li>
-    </ul>
-
-    <h2>📂 Projects</h2>
-    <p>Check out my projects on <a href="https://github.com/kennypothuraju">GitHub</a>.</p>
-
-    <h2>🏆 Certifications</h2>
-    <p>Completed TryHackMe learning paths and Security+ certification.</p>
-
-    <h2>📩 Contact</h2>
-    <p>📧 Email:kennypothuraju@gmail.com</p>
-    <p>🔗 <a href="https://www.linkedin.com/in/kenny-pothuraju-21884b207">LinkedIn</a></p>
+    <header>🚀 Kenne Babu Pothuraju - Cybersecurity Portfolio</header>
+    
+    <section>
+        <h2>About Me</h2>
+        <p>I am a passionate <strong>Cybersecurity Professional & SOC Analyst</strong> with expertise in ethical hacking, penetration testing, SIEM, incident response, and automation using Bash scripting. With multiple industry-recognized certifications, I specialize in detecting, analyzing, and mitigating cyber threats to safeguard organizations from security breaches.</p>
+    </section>
+    
+    <div class="container">
+        <div class="card">
+            <h2>🛡️ Skills</h2>
+            <ul>
+                <li>✅ Cyber Security</li>
+                <li>✅ Ethical Hacking</li>
+                <li>✅ Penetration Testing</li>
+                <li>✅ SOC Analyst</li>
+                <li>✅ Bash Scripting</li>
+                <li>✅ Incident Response</li>
+                <li>✅ SIEM & Splunk</li>
+                <li>✅ Content Creation</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>📂 Projects</h2>
+            <p>Explore my projects on <a href="https://github.com/kennypothuraju">GitHub</a>.</p>
+        </div>
+        
+        <div class="card">
+            <h2>🏆 Certifications</h2>
+            <ul>
+                <li>Certified in Ethical Hacking, Cyber Security & Web Penetration Testing - ERSegment</li>
+                <li>Certified in Network Defense - Cisco</li>
+                <li>Certified in Bash Scripting and Automation - Darkrelay Security Labs</li>
+                <li>Certified SOC Analyst - ERSegment</li>
+                <li>Certified SOC Analyst Learning Path - Lets Defend</li>
+                <li>Certified SOC Analyst Level 1 - TryHackMe</li>
+                <li>Certified Fundamentals in Cybersecurity - Fortinet</li>
+                <li>Certified Generative AI for Cybersecurity - EC-Council</li>
+                <li>Certified CompTIA Security+ - Cybrary</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>📩 Contact</h2>
+            <p>📧 Email: kennypothuraju@gmail.com</p>
+            <p>🔗 <a href="https://www.linkedin.com/in/kenny-pothuraju-21884b207">LinkedIn</a></p>
+            <p>🔗 <a href="https://github.com/kennypothuraju">GitHub</a></p>
+        </div>
+    </div>
 </body>
 </html>
