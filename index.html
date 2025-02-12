@@ -13,11 +13,10 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            overflow-x: hidden;
             position: relative;
         }
         
-        /* Cybersecurity Particle Animation */
+        /* Particle Background */
         #particles-js {
             position: fixed;
             width: 100%;
@@ -26,7 +25,7 @@
             left: 0;
             z-index: -1;
         }
-        
+
         header {
             background: linear-gradient(90deg, #00ff99, #00ccff);
             padding: 20px;
@@ -35,102 +34,93 @@
             color: #fff;
             text-transform: uppercase;
             box-shadow: 0px 4px 15px rgba(0, 255, 153, 0.5);
-            animation: fadeIn 2s ease-in-out;
-            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff;
         }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 0;
+        }
+
+        .card {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            text-align: left;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 20px rgba(0, 255, 153, 0.5);
+        }
+
         h2 {
             color: #00ff99;
-            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff;
-            transition: text-shadow 0.3s;
+            border-bottom: 2px solid #00ccff;
+            display: inline-block;
+            padding-bottom: 5px;
         }
-        h2:hover {
-            text-shadow: 0 0 15px #00ff99, 0 0 30px #00ccff;
-        }
-        nav {
-            background: rgba(26, 26, 26, 0.9);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.3);
-        }
-        nav ul {
-            list-style: none;
+
+        ul {
+            list-style-type: none;
             padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
         }
-        nav ul li {
-            margin: 0 15px;
+
+        li {
+            padding: 10px;
+            font-size: 18px;
         }
-        nav ul li a {
-            color: white;
+
+        a {
+            color: #00ccff;
             text-decoration: none;
             font-weight: bold;
-            transition: text-shadow 0.3s;
-        }
-        nav ul li a:hover {
-            color: #00ff99;
-            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff;
         }
     </style>
 </head>
 <body>
     <div id="particles-js"></div>
     <header>🚀 Kenne Babu Pothuraju - Cybersecurity Portfolio</header>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate <strong>Cybersecurity Professional & SOC Analyst</strong> with expertise in ethical hacking, penetration testing, SIEM, incident response, and automation using Bash scripting.</p>
-    </section>
-    
-    <section id="skills">
-        <h2>🛡️ Skills</h2>
-        <ul>
-            <li>✅ Cyber Security</li>
-            <li>✅ Ethical Hacking</li>
-            <li>✅ Penetration Testing</li>
-            <li>✅ SOC Analyst</li>
-            <li>✅ Bash Scripting</li>
-            <li>✅ Incident Response</li>
-            <li>✅ SIEM & Splunk</li>
-            <li>✅ Content Creation</li>
-        </ul>
-    </section>
-    
-    <section id="certifications">
-        <h2>🏆 Certifications</h2>
-        <ul>
-            <li>Certified in Ethical Hacking, Cyber Security & Web Penetration Testing - ERSegment</li>
-            <li>Certified in Network Defense - Cisco</li>
-            <li>Certified in Bash Scripting and Automation - Darkrelay Security Labs</li>
-            <li>Certified SOC Analyst - ERSegment</li>
-            <li>Certified SOC Analyst Learning Path - Lets Defend</li>
-            <li>Certified SOC Analyst Level 1 - TryHackMe</li>
-            <li>Certified Fundamentals in Cybersecurity - Fortinet</li>
-            <li>Certified Generative AI for Cybersecurity - EC-Council</li>
-            <li>Certified CompTIA Security+ - Cybrary</li>
-        </ul>
-    </section>
-    
-    <section id="contact">
-        <h2>📩 Contact</h2>
-        <p>📧 Email: kennypothuraju@gmail.com</p>
-        <p>🔗 <a href="https://www.linkedin.com/in/kenny-pothuraju-21884b207">LinkedIn</a></p>
-        <p>🔗 <a href="https://github.com/kennypothuraju">GitHub</a></p>
-    </section>
-    
+
+    <div class="container">
+        <div class="card">
+            <h2>🛡️ Skills</h2>
+            <ul>
+                <li>✅ Cyber Security</li>
+                <li>✅ Ethical Hacking</li>
+                <li>✅ Penetration Testing</li>
+                <li>✅ SOC Analyst</li>
+                <li>✅ Bash Scripting</li>
+                <li>✅ Incident Response</li>
+                <li>✅ SIEM & Splunk</li>
+                <li>✅ Content Creation</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>🏆 Certifications</h2>
+            <ul>
+                <li>Certified in Ethical Hacking - ERSegment</li>
+                <li>Certified in Network Defense - Cisco</li>
+                <li>Certified SOC Analyst - ERSegment</li>
+                <li>Certified SOC Analyst Level 1 - TryHackMe</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>📩 Contact</h2>
+            <p>📧 Email: kennypothuraju@gmail.com</p>
+            <p>🔗 <a href="https://www.linkedin.com/in/kenny-pothuraju-21884b207">LinkedIn</a></p>
+            <p>🔗 <a href="https://github.com/kennypothuraju">GitHub</a></p>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         particlesJS('particles-js', {
@@ -143,4 +133,5 @@
     </script>
 </body>
 </html>
+
 
