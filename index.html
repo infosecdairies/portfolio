@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenne Babu Pothuraju - Cybersecurity Portfolio</title>
+    <title>Kenne Babu Pothuraju</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #0a0a0a;
@@ -13,10 +13,11 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            overflow-x: hidden;
             position: relative;
         }
         
-        /* Particle Background */
+        /* Cybersecurity Particle Animation */
         #particles-js {
             position: fixed;
             width: 100%;
@@ -25,59 +26,65 @@
             left: 0;
             z-index: -1;
         }
-
+        
         header {
+            font-family: 'Orbitron', sans-serif;
             background: linear-gradient(90deg, #00ff99, #00ccff);
             padding: 20px;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
             color: #fff;
             text-transform: uppercase;
             box-shadow: 0px 4px 15px rgba(0, 255, 153, 0.5);
+            animation: fadeIn 2s ease-in-out;
+            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff;
+            letter-spacing: 2px;
         }
-
-        section {
-            padding: 50px 20px;
-            max-width: 900px;
-            margin: auto;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s ease-in-out forwards;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         h2 {
             color: #00ff99;
-            border-bottom: 2px solid #00ccff;
-            display: inline-block;
-            padding-bottom: 5px;
-            text-shadow: 0 0 10px #00ff99;
-            transition: 0.3s;
+            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff;
+            transition: text-shadow 0.3s;
         }
-
         h2:hover {
-            color: #00ccff;
-            text-shadow: 0 0 15px #00ccff;
+            text-shadow: 0 0 15px #00ff99, 0 0 30px #00ccff;
         }
-
+        nav {
+            background: rgba(26, 26, 26, 0.9);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.3);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: text-shadow 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00ff99;
+            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff;
+        }
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 50px 0;
+            margin-top: 20px;
         }
-
         .card {
-            background: rgba(26, 26, 26, 0.6);
+            background: rgba(26, 26, 26, 0.8);
             backdrop-filter: blur(10px);
             padding: 30px;
             margin: 20px;
@@ -85,22 +92,31 @@
             width: 300px;
             box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.3);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-            text-align: left;
+            position: relative;
+            overflow: hidden;
         }
-
         .card:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 0px 6px 20px rgba(0, 255, 153, 0.5);
         }
     </style>
 </head>
 <body>
     <div id="particles-js"></div>
-    <header>🚀 Kenne Babu Pothuraju - Cybersecurity Portfolio</header>
-
-    <section>
+    <header>Kenne Babu Pothuraju</header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
         <h2>About Me</h2>
-        <p>I am a passionate <strong>Cybersecurity Professional & SOC Analyst</strong> with expertise in ethical hacking, penetration testing, SIEM, incident response, and automation using Bash scripting. With multiple industry-recognized certifications, I specialize in detecting, analyzing, and mitigating cyber threats to safeguard organizations from security breaches.</p>
+        <p>I am a passionate <strong>Cybersecurity Professional & SOC Analyst</strong> with expertise in ethical hacking, penetration testing, SIEM, incident response, and automation using Bash scripting.</p>
     </section>
     
     <div class="container">
@@ -121,7 +137,7 @@
         <div class="card">
             <h2>🏆 Certifications</h2>
             <ul>
-                <li>Certified in Ethical Hacking - ERSegment</li>
+                <li>Certified in Ethical Hacking, Cyber Security & Web Penetration Testing - ERSegment</li>
                 <li>Certified in Network Defense - Cisco</li>
                 <li>Certified in Bash Scripting and Automation - Darkrelay Security Labs</li>
                 <li>Certified SOC Analyst - ERSegment</li>
@@ -140,7 +156,7 @@
             <p>🔗 <a href="https://github.com/kennypothuraju">GitHub</a></p>
         </div>
     </div>
-
+    
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         particlesJS('particles-js', {
@@ -153,5 +169,3 @@
     </script>
 </body>
 </html>
-
-
