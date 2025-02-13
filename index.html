@@ -6,6 +6,8 @@
     <title>Kenne Babu Pothuraju</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #0a0a0a;
@@ -27,64 +29,53 @@
             z-index: -1;
         }
         
-        header {
-            font-family: 'Orbitron', sans-serif;
-            background: linear-gradient(90deg, #00ff99, #00ccff);
-            padding: 20px;
-            font-size: 36px;
-            font-weight: bold;
-            color: #fff;
-            text-transform: uppercase;
-            box-shadow: 0px 4px 15px rgba(0, 255, 153, 0.5);
-            animation: fadeIn 2s ease-in-out;
-            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff;
-            letter-spacing: 2px;
-        }
-        h2 {
-            color: #00ff99;
-            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff;
-            transition: text-shadow 0.3s;
-        }
-        h2:hover {
-            text-shadow: 0 0 15px #00ff99, 0 0 30px #00ccff;
-        }
-        nav {
-            background: rgba(26, 26, 26, 0.9);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.3);
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .intro {
+            height: 100vh;
             display: flex;
             justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
+            align-items: center;
+            flex-direction: column;
+            font-size: 36px;
             font-weight: bold;
-            transition: text-shadow 0.3s;
+            animation: fadeIn 2s ease-in-out;
+            cursor: pointer;
         }
-        nav ul li a:hover {
-            color: #00ff99;
-            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ccff;
+        .intro p {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
         }
+        .intro p:first-child {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .intro p:nth-child(2) {
+            font-size: 20px;
+            opacity: 0.8;
+            color: white;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hidden {
+            display: none;
+        }
+        
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 20px;
+            padding: 50px 0;
         }
+
         .card {
-            background: rgba(26, 26, 26, 0.8);
+            background: rgba(26, 26, 26, 0.6);
             backdrop-filter: blur(10px);
             padding: 30px;
             margin: 20px;
@@ -92,69 +83,67 @@
             width: 300px;
             box-shadow: 0px 4px 10px rgba(0, 255, 153, 0.3);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-            position: relative;
-            overflow: hidden;
+            text-align: left;
         }
+
         .card:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
             box-shadow: 0px 6px 20px rgba(0, 255, 153, 0.5);
         }
     </style>
 </head>
 <body>
     <div id="particles-js"></div>
-    <header>Kenne Babu Pothuraju</header>
     
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="intro" id="intro" onclick="showMainContent()">
+        <p style="animation-delay: 0s;">Hi! My Name is <span style="color: white;">Kenny</span></p>
+        <p style="animation-delay: 0.5s;">Cybersecurity Enthusiastic</p>
+        <p style="animation-delay: 1s; font-size: 18px; opacity: 0.7;">Click anywhere to enter</p>
+    </div>
     
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate <strong>Cybersecurity Professional & SOC Analyst</strong> with expertise in ethical hacking, penetration testing, SIEM, incident response, and automation using Bash scripting.</p>
-    </section>
-    
-    <div class="container">
-        <div class="card">
-            <h2>🛡️ Skills</h2>
-            <ul>
-                <li>✅ Cyber Security</li>
-                <li>✅ Ethical Hacking</li>
-                <li>✅ Penetration Testing</li>
-                <li>✅ SOC Analyst</li>
-                <li>✅ Bash Scripting</li>
-                <li>✅ Incident Response</li>
-                <li>✅ SIEM & Splunk</li>
-                <li>✅ Content Creation</li>
-            </ul>
-        </div>
+    <div id="main-content" class="hidden">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am a passionate <strong>Cybersecurity Professional & SOC Analyst</strong> with expertise in ethical hacking, penetration testing, SIEM, incident response, and automation using Bash scripting.</p>
+        </section>
         
-        <div class="card">
-            <h2>🏆 Certifications</h2>
-            <ul>
-                <li>Certified in Ethical Hacking, Cyber Security & Web Penetration Testing - ERSegment</li>
-                <li>Certified in Network Defense - Cisco</li>
-                <li>Certified in Bash Scripting and Automation - Darkrelay Security Labs</li>
-                <li>Certified SOC Analyst - ERSegment</li>
-                <li>Certified SOC Analyst Learning Path - Lets Defend</li>
-                <li>Certified SOC Analyst Level 1 - TryHackMe</li>
-                <li>Certified Fundamentals in Cybersecurity - Fortinet</li>
-                <li>Certified Generative AI for Cybersecurity - EC-Council</li>
-                <li>Certified CompTIA Security+ - Cybrary</li>
-            </ul>
-        </div>
-        
-        <div class="card">
-            <h2>📩 Contact</h2>
-            <p>📧 Email: kennypothuraju@gmail.com</p>
-            <p>🔗 <a href="https://www.linkedin.com/in/kenny-pothuraju-21884b207">LinkedIn</a></p>
-            <p>🔗 <a href="https://github.com/kennypothuraju">GitHub</a></p>
-        </div>
+        <section id="next" class="section">
+            <div class="container">
+                <div class="card">
+                    <h2>🛡️ Skills</h2>
+                    <ul>
+                        <li>✅ Cyber Security</li>
+                        <li>✅ Ethical Hacking</li>
+                        <li>✅ Penetration Testing</li>
+                        <li>✅ SOC Analyst</li>
+                        <li>✅ Bash Scripting</li>
+                        <li>✅ Incident Response</li>
+                        <li>✅ SIEM & Splunk</li>
+                        <li>✅ Content Creation</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>🏆 Certifications</h2>
+                    <ul>
+                        <li>Certified in Ethical Hacking - ERSegment</li>
+                        <li>Certified in Network Defense - Cisco</li>
+                        <li>Certified in Bash Scripting and Automation - Darkrelay Security Labs</li>
+                        <li>Certified SOC Analyst - ERSegment</li>
+                        <li>Certified SOC Analyst Learning Path - Lets Defend</li>
+                        <li>Certified SOC Analyst Level 1 - TryHackMe</li>
+                        <li>Certified Fundamentals in Cybersecurity - Fortinet</li>
+                        <li>Certified Generative AI for Cybersecurity - EC-Council</li>
+                        <li>Certified CompTIA Security+ - Cybrary</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>📩 Contact</h2>
+                    <p>📧 Email: kennypothuraju@gmail.com</p>
+                    <p>🔗 <a href="https://www.linkedin.com/in/kenny-pothuraju-21884b207">LinkedIn</a></p>
+                    <p>🔗 <a href="https://github.com/kennypothuraju">GitHub</a></p>
+                </div>
+            </div>
+        </section>
     </div>
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -166,6 +155,12 @@
                 move: { speed: 2 }
             }
         });
+        
+        function showMainContent() {
+            document.getElementById('intro').classList.add('hidden');
+            document.getElementById('main-content').classList.remove('hidden');
+        }
     </script>
 </body>
 </html>
+
